@@ -1,0 +1,6 @@
+{
+  "name": "Attendance App",
+  "description": "An attendance tracking application that syncs with cloud and Google Sheets/Excel.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
