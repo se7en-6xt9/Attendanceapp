@@ -27,12 +27,13 @@ jobs:
     - name: Generate Wrapper (Fallback)
       run: gradle wrapper
 
+    - name: Decode debug.keystore
+      run: base64 -d debug.keystore.base64 > debug.keystore
+      
     - name: Grant execute permission for gradlew
       run: chmod +x gradlew
 
     - name: Build Debug APK
-      env:
-        JAVA_TOOL_OPTIONS: "-Djava.awt.headless=true"
       run: ./gradlew assembleDebug --no-daemon
 
     - name: Upload APK Artifact
